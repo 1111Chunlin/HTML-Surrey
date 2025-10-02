@@ -6,10 +6,14 @@
   <style>
     body { margin: 20px; font-family: Arial, sans-serif; }
     img { max-width: 100%; height: auto; }
-    table { border-collapse: collapse; width: 320px; }
-    th, td { border: 1px solid #ddd; padding: 6px; }
-    tr:nth-child(even) { background: #f2f2f2; }
+    hr { border: none; border-top: 1px solid #ddd; margin: 12px 0; }
     pre { white-space: pre-wrap; }
+    /* table */
+    table { border-collapse: collapse; width: 360px; }
+    th, td { border: 1px solid #ddd; padding: 6px; text-align: left; }
+    tr:nth-child(even) { background: #f2f2f2; }
+    /* small helper */
+    .toc { margin-top: 10px; margin-bottom: 20px; }
   </style>
 </head>
 <body>
@@ -19,60 +23,58 @@
   <h2>URN1234567</h2>
   <hr>
 
- <h2>Conference paper: Bridge Deck Repairs</h2>
-<hr>
+  <h2>Conference paper: Bridge Deck Repairs</h2>
+  <hr>
 
-<h3 id="Abstract">Abstract</h3>
-<pre>Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an
-intelligent machine through the interaction of an oracle with the machine system, over a sequence of
-learning epochs. ... as in Vlachos (2008).</pre>
+  <!-- Table of contents -->
+  <h3>Table of contents</h3>
+  <table class="toc">
+    <tr><td><a href="#Abstract">Abstract</a></td></tr>
+    <tr><td><a href="#Introduction">Introduction</a></td></tr>
+    <tr><td><a href="#AnalysisAndDiscussion">Analysis and discussion</a></td></tr>
+    <tr><td><a href="#References">References</a></td></tr>
+  </table>
 
-<h3 id="Introduction">Introduction</h3>
-<p>Content goes here.</p>
+  <!-- Sections -->
+  <h3 id="Abstract">Abstract</h3>
+  <pre>Active Learning (Angluin, 1988; Cohn et al., 1994) is a paradigm where a concept is learnt by an
+intelligent machine through interaction with an oracle across learning epochs. A distinctive
+component is the querying strategy (e.g., Query by Committee, Monte Carlo estimation, uncertainty
+sampling, margin sampling). Newly labeled instances are added to the training set and the model
+is updated iteratively until a stopping criterion is met (e.g., as in Vlachos, 2008).</pre>
 
-<h3 id="AnalysisAndDiscussion">Analysis and discussion</h3>
-<p>Content goes here.</p>
+  <h3 id="Introduction">Introduction</h3>
+  <p>Content goes here.</p>
 
-<h3 id="References">References</h3>
-<p>Content goes here.</p>
+  <h3 id="AnalysisAndDiscussion">Analysis and discussion</h3>
+  <p>Content goes here.</p>
 
-<!-- table of contents -->
-<h3>Table of contents</h3>
-<table>
-  <tr><td><a href="#Abstract">Abstract</a></td></tr>
-  <tr><td><a href="#Introduction">Introduction</a></td></tr>
-  <tr><td><a href="#AnalysisAndDiscussion">Analysis and discussion</a></td></tr>
-  <tr><td><a href="#References">References</a></td></tr>
-</table>
-<!-- table of contents -->
-<h3>Table of contents</h3>
-<table>
-  <tr><td><a href="#Abstract">Abstract</a></td></tr>
-  <tr><td><a href="#Introduction">Introduction</a></td></tr>
-  <tr><td><a href="#AnalysisAndDiscussion">Analysis and discussion</a></td></tr>
-  <tr><td><a href="#References">References</a></td></tr>
-</table>
+  <!-- Data table -->
+  <h3>Table 1. Data on cost and lifespan of bridge repairs</h3>
+  <table>
+    <tr><th>£ Cost of repairs</th><th>Lifespan of repairs (years)</th></tr>
+    <tr><td>0.7 m</td><td>2</td></tr>
+    <tr><td>3.3 m</td><td>4</td></tr>
+    <tr><td>2.6 m</td><td>5</td></tr>
+    <tr><td>17.4 m</td><td>7</td></tr>
+    <tr><td>8.8 m</td><td>9</td></tr>
+  </table>
 
-<h3>Table 1. Data on cost and lifespan of bridge repairs</h3>
-<table>
-  <tr><th>£ Cost of repairs</th><th>Lifespan of repairs (years)</th></tr>
-  <tr><td>0.7 m</td><td>2</td></tr>
-  <tr><td>3.3 m</td><td>4</td></tr>
-  <tr><td>2.6 m</td><td>5</td></tr>
-  <tr><td>17.4 m</td><td>7</td></tr>
-  <tr><td>8.8 m</td><td>9</td></tr>
-</table>
-
-<h3 id="References">References</h3>
-<p><a href="https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034">Toshihiko et&nbsp;al. (2023).</a></p>
-<pre>Angluin, D. (1988), Queries and concept learning. Machine Learning, 2(4), 319–342.
-Brinker, K. (2003), Incorporating Diversity in Active Learning with Support Vector Machines.
-Proceedings of the Twentieth International Conference on Machine Learning (ICML-2003).
-Bruzzone, L., Chi, M., and Marconcini, M. (2006), A novel transductive SVM for semisupervised classification
-of remote-sensing images, IEEE Transactions on Geoscience and Remote Sensing, 44(11), 3363.
-Bruzzone, L. and Persello, C. (2009), Active learning for classification of remote sensing images.
-In: Geoscience and Remote Sensing Symposium, 2009 IEEE International, IGARSS 2009, 3.
-Campbell, C., Cristianini, N., and Smola, A. (2000), Query learning with large margin classifiers.
-In: Proc. 17th International Conference on Machine Learning. Morgan Kaufmann, 111–118.</pre>
-
+  <!-- References -->
+  <h3 id="References">References</h3>
+  <p>
+    <a href="https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034" target="_blank" rel="noopener">
+      Toshihiko et&nbsp;al. (2023).
+    </a>
+  </p>
+  <pre>Angluin, D. (1988). Queries and concept learning. Machine Learning, 2(4), 319–342.
+Brinker, K. (2003). Incorporating Diversity in Active Learning with Support Vector Machines.
+  Proceedings of the Twentieth International Conference on Machine Learning (ICML-2003).
+Bruzzone, L., Chi, M., & Marconcini, M. (2006). A novel transductive SVM for semisupervised classification
+  of remote-sensing images. IEEE Transactions on Geoscience and Remote Sensing, 44(11), 3363.
+Bruzzone, L., & Persello, C. (2009). Active learning for classification of remote sensing images.
+  In: Geoscience and Remote Sensing Symposium, 2009 IEEE International, IGARSS 2009.
+Campbell, C., Cristianini, N., & Smola, A. (2000). Query learning with large margin classifiers.
+  In: Proc. 17th International Conference on Machine Learning. Morgan Kaufmann, 111–118.</pre>
+</body>
 </html>
