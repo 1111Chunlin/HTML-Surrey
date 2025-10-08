@@ -119,5 +119,101 @@ Campbell, C., Cristianini, N., & Smola, A. (2000). Query learning with large mar
       chart.draw(data, options);
     }
   </script>
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Monthly Sales Chart</title>
+  <!-- Include Google Charts API -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+  <!-- Create a div element to hold the chart -->
+  <div id="chart_div" style="width: 600px; height: 400px;"></div>
+
+  <script>
+    // Load the corechart package and set a callback function
+    google.charts.load('current', { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Callback function to draw the column chart
+    function drawChart() {
+      // Create a DataTable with columns for month and sales
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Month');
+      data.addColumn('number', 'Sales (in GBP)');
+
+      // Add data for each month in 2023
+      data.addRows([
+        ['January',   25000],
+        ['February',  28000],
+        ['March',     32000],
+        ['April',     27000],
+        ['May',       31000],
+        ['June',      34000],
+        ['July',      38000],
+        ['August',    36000],
+        ['September', 31000],
+        ['October',   29000],
+        ['November',  27000],
+        ['December',  32000]
+      ]);
+
+      // Set chart options and formatting
+      var options = {
+        title: 'Monthly Sales in 2023',
+        hAxis: { title: 'Month' },
+        vAxis: { title: 'Sales (in GBP)' },
+        colors: ['#3366cc'],    // one color for all columns (matches screenshot)
+        legend: 'none',
+        animation: {
+          startup: true,
+          duration: 1000,
+          easing: 'out'
+        }
+      };
+
+      // Create and draw the chart
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+  </script>
+</body>
+</html>
+<script>
+  google.charts.load('current', { packages: ['corechart'] });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var base = [
+      ['Month', 'Sales', { role: 'style' }],
+      ['January',   25000, '#3366cc'],
+      ['February',  28000, '#dc3912'],
+      ['March',     32000, '#ff9900'],
+      ['April',     27000, '#109618'],
+      ['May',       31000, '#990099'],
+      ['June',      34000, '#0099c6'],
+      ['July',      38000, '#dd4477'],
+      ['August',    36000, '#66aa00'],
+      ['September', 31000, '#b82e2e'],
+      ['October',   29000, '#316395'],
+      ['November',  27000, '#994499'],
+      ['December',  32000, '#22aa99']
+    ];
+    var data = google.visualization.arrayToDataTable(base);
+
+    var options = {
+      title: 'Monthly Sales in 2023',
+      hAxis: { title: 'Month' },
+      vAxis: { title: 'Sales (in GBP)' },
+      legend: 'none',
+      animation: { startup: true, duration: 1000, easing: 'out' }
+    };
+
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
+
 </body>
 </html>
