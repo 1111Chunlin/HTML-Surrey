@@ -19,6 +19,13 @@
   <script>
     const username = 'nr0025';
     const repo = 'FY0025';
+    <script>
+    const branch = 'main';
+
+// 仅取 main 分支最新一次提交
+const url = `https://api.github.com/repos/${username}/${repo}/commits?sha=${branch}&per_page=1`;
+</script>
+
     const url = `https://api.github.com/repos/${username}/${repo}/commits?per_page=1`;
   </script>
 
